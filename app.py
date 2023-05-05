@@ -15,7 +15,6 @@ HERE = Path(__file__).parent
 
 logger = logging.getLogger(__name__)
 
-
 WEBRTC_CLIENT_SETTINGS = ClientSettings(
     rtc_configuration={"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]},
     media_stream_constraints={
@@ -28,7 +27,6 @@ WEBRTC_CLIENT_SETTINGS = ClientSettings(
 def main():
     st.header("WebRTC demo")
     app_sendonly_video()
-    
 
 
 def app_sendonly_video():
@@ -62,7 +60,7 @@ if __name__ == "__main__":
 
     logging.basicConfig(
         format="[%(asctime)s] %(levelname)7s from %(name)s in %(pathname)s:%(lineno)d: "
-        "%(message)s",
+               "%(message)s",
         force=True,
     )
 
@@ -75,3 +73,4 @@ if __name__ == "__main__":
     fsevents_logger.setLevel(logging.WARNING)
 
     main()
+ 
